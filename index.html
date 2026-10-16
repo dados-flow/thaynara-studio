@@ -4,100 +4,474 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Studio Thaynara Palhares | Sobrancelhas e Epilação em Pedreiras e Trizidela do Vale</title>
+<title>Studio Thaynara Palhares | Pedreiras - MA</title>
 
-<meta name="description" content="Studio Thaynara Palhares especializado em design de sobrancelhas, henna e epilação facial em Pedreiras MA e Trizidela do Vale MA.">
-
-<meta name="keywords" content="sobrancelhas em pedreiras, sobrancelhas em trizidela do vale, design de sobrancelhas pedreiras, epilação pedreiras, epilação trizidela do vale, studio thaynara palhares">
+<meta name="description" content="Design de Sobrancelhas, Henna, Brow Lamination, Lash Lift e Epilação Feminina em Pedreiras MA e Trizidela do Vale MA.">
 
 <style>
-body{
-    margin:0;
-    font-family:Arial, sans-serif;
-    background:#111;
-    color:#fff;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    min-height:100vh;
-    text-align:center;
+
+:root{
+    --gold:#c8a56a;
+    --gold-dark:#b68e4a;
+    --white:#ffffff;
+    --light:#f8f6f2;
+    --dark:#222222;
+    --gray:#666666;
 }
 
-.container{
-    padding:30px;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:var(--light);
+    color:var(--dark);
+}
+
+/* TOPO */
+
+header{
+    position:fixed;
+    top:0;
+    width:100%;
+    background:white;
+    box-shadow:0 2px 15px rgba(0,0,0,.08);
+    z-index:1000;
+}
+
+.navbar{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 20px;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+    color:var(--gold);
+}
+
+.menu{
+    display:flex;
+    gap:25px;
+}
+
+.menu a{
+    text-decoration:none;
+    color:#333;
+    font-weight:600;
+}
+
+.btn-whats{
+    background:#25D366;
+    color:white;
+    padding:12px 22px;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+/* HERO */
+
+.hero{
+    margin-top:90px;
+    min-height:80vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:40px 20px;
+    background:linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+    url('img/capa.jpg');
+    background-size:cover;
+    background-position:center;
+    color:white;
+}
+
+.hero-content{
     max-width:700px;
 }
 
-h1{
-    color:#D4AF37;
-    font-size:3rem;
-    margin-bottom:10px;
+.hero h1{
+    font-size:60px;
+    margin-bottom:20px;
 }
 
-p{
-    line-height:1.7;
-    color:#ddd;
+.hero p{
+    font-size:18px;
+    line-height:1.8;
+    margin-bottom:30px;
 }
 
-.links{
-    margin-top:30px;
-}
-
-.links a{
-    display:inline-block;
-    margin:10px;
-    padding:14px 28px;
-    background:#D4AF37;
-    color:#111;
+.btn-principal{
+    background:var(--gold);
+    color:white;
+    padding:15px 35px;
     text-decoration:none;
-    border-radius:8px;
+    border-radius:50px;
     font-weight:bold;
+}
+
+/* GERAL */
+
+section{
+    padding:80px 20px;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+}
+
+.titulo{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.titulo h2{
+    font-size:40px;
+    color:var(--gold);
+}
+
+/* SOBRE */
+
+.sobre{
+    display:grid;
+    grid-template-columns:350px 1fr;
+    gap:40px;
+    align-items:center;
+}
+
+.sobre img{
+    width:100%;
+    border-radius:20px;
+}
+
+.sobre p{
+    color:var(--gray);
+    font-size:17px;
+    line-height:1.8;
+}
+
+/* PROCEDIMENTOS */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
     transition:.3s;
 }
 
-.links a:hover{
-    transform:translateY(-2px);
+.card:hover{
+    transform:translateY(-5px);
 }
 
-footer{
-    margin-top:40px;
-    color:#999;
-    font-size:14px;
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
 }
+
+.card h3{
+    color:var(--gold);
+    padding:20px 20px 10px;
+}
+
+.card p{
+    padding:0 20px 25px;
+    color:#666;
+}
+
+/* INSTAGRAM */
+
+.instagram{
+    text-align:center;
+    background:white;
+}
+
+.instagram a{
+    display:inline-block;
+    background:#C13584;
+    color:white;
+    padding:15px 30px;
+    border-radius:50px;
+    text-decoration:none;
+    margin-top:20px;
+    font-weight:bold;
+}
+
+/* MAPA */
+
+.mapa{
+    border-radius:20px;
+    overflow:hidden;
+}
+
+iframe{
+    width:100%;
+    height:450px;
+    border:none;
+}
+
+/* RODAPE */
+
+footer{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:40px 20px;
+}
+
+.whats-float{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    width:65px;
+    height:65px;
+    background:#25D366;
+    color:white;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+    font-size:30px;
+}
+
+/* RESPONSIVO */
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:38px;
+}
+
+.menu{
+    display:none;
+}
+
+.sobre{
+    grid-template-columns:1fr;
+    text-align:center;
+}
+
+}
+
 </style>
 </head>
+
 <body>
+
+<header>
+
+<div class="navbar">
+
+<div class="logo">
+Studio Thaynara Palhares
+</div>
+
+<nav class="menu">
+#sobreQuem Sou Eu</a>
+#procedimentosProcedimentos</a>
+#localizacaoLocalização</a>
+</nav>
+
+<a href="https://wa.me/5598999999999"
+class="btn-whats"
+target="_blank">
+WhatsApp
+</a>
+
+</div>
+
+</header>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>Beleza, autoestima e confiança</h1>
+
+<p>
+Especialista em Design de Sobrancelhas,
+Henna, Brow Lamination, Lash Lift e Epilação Feminina
+em Pedreiras, Trizidela do Vale e toda região.
+</p>
+
+<a href="https://wa.me/5598999999999"
+class="btn-principal"
+target="_blank">
+
+Agendar Horário
+
+</a>
+
+</div>
+
+</section>
+
+<section id="sobre">
 
 <div class="container">
 
-<h1>Studio Thaynara Palhares</h1>
-
-<p>
-Nosso site está em desenvolvimento.
-</p>
-
-<p>
-Em breve você encontrará informações sobre nossos serviços de
-<strong>design de sobrancelhas</strong>,
-<strong>henna</strong> e
-<strong>epilação facial</strong>
-em <strong>Pedreiras - MA</strong> e
-<strong>Trizidela do Vale - MA</strong>.
-</p>
-
-<div class="links">
-    <a href="https://wa.me/5599984937367"
-       target="_blank"
-       rel="noopener noreferrer">
-       Clique Aqui Para Fazer Seu Agendamento Agora
-    </a>
+<div class="titulo">
+<h2>Quem Sou Eu</h2>
 </div>
+
+<div class="sobre">
+
+<img src="https://static.vecteezy.com/ti/fotos-gratis/t2/57068323-solteiro-fresco-vermelho-morango-em-mesa-verde-fundo-comida-fruta-doce-macro-suculento-plantar-imagem-foto.jpg" alt="Design de Sobrancelhas">
+
+<div>
+
+<p>
+Olá! Sou Thaynara Palhares, especialista em estética e beleza.
+Meu objetivo é ajudar mulheres a se sentirem mais bonitas,
+confiantes e felizes através de procedimentos realizados
+com carinho, técnica e atenção aos detalhes.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="procedimentos">
+
+<div class="container">
+
+<div class="titulo">
+<h2>Procedimentos</h2>
+</div>
+
+<div class="cards">
+
+<div class="card">
+<img src="https://static.vecteezy.com/ti/fotos-gratis/t2/57068323-solteiro-fresco-vermelho-morango-em-mesa-verde-fundo-comida-fruta-doce-macro-suculento-plantar-imagem-foto.jpg" alt="Design de Sobrancelhas">
+<h3>Design de Sobrancelhas</h3>
+<p>Harmonização e valorização do olhar.</p>
+</div>
+
+<div class="card">
+<img src="https://static.vecteezy.com/ti/fotos-gratis/t2/57068323-solteiro-fresco-vermelho-morango-em-mesa-verde-fundo-comida-fruta-doce-macro-suculento-plantar-imagem-foto.jpg" alt="Design de Sobrancelhas">
+<h3>Henna + Design</h3>
+<p>Mais definição e preenchimento natural.</p>
+</div>
+
+<div class="card">
+<img src="https://static.vecteezy.com/ti/fotos-gratis/t2/57068323-solteiro-fresco-vermelho-morango-em-mesa-verde-fundo-comida-fruta-doce-macro-suculento-plantar-imagem-foto.jpg" alt="Design de Sobrancelhas">
+<h3>Brow Lamination</h3>
+<p>Sobrancelhas alinhadas e modernas.</p>
+</div>
+
+<div class="card">
+<img src="https://static.vecteezy.com/ti/fotos-gratis/t2/57068323-solteiro-fresco-vermelho-morango-em-mesa-verde-fundo-comida-fruta-doce-macro-suculento-plantar-imagem-foto.jpg" alt="Design de Sobrancelhas">
+<h3>Lash Lift</h3>
+<p>Curvatura natural para os cílios.</p>
+</div>
+
+<div class="card">
+<img src="https://static.vecteezy.com/ti/fotos-gratis/t2/57068323-solteiro-fresco-vermelho-morango-em-mesa-verde-fundo-comida-fruta-doce-macro-suculento-plantar-imagem-foto.jpg" alt="Design de Sobrancelhas">
+<h3>Epilação Íntima</h3>
+<p>Conforto e resultado duradouro.</p>
+</div>
+
+<div class="card">
+<img src="https://static.vecteezy.com/ti/fotos-gratis/t2/57068323-solteiro-fresco-vermelho-morango-em-mesa-verde-fundo-comida-fruta-doce-macro-suculento-plantar-imagem-foto.jpg" alt="Design de Sobrancelhas">
+<h3>Meia Perna</h3>
+<p>Pele lisa e bem cuidada.</p>
+</div>
+
+<div class="card">
+<img src="https://static.vecteezy.com/ti/fotos-gratis/t2/57068323-solteiro-fresco-vermelho-morango-em-mesa-verde-fundo-comida-fruta-doce-macro-suculento-plantar-imagem-foto.jpg" alt="Design de Sobrancelhas">
+<h3>Perna Completa</h3>
+<p>Remoção eficiente dos pelos.</p>
+</div>
+
+<div class="card">
+<img src="https://static.vecteezy.com/ti/fotos-gratis/t2/57068323-solteiro-fresco-vermelho-morango-em-mesa-verde-fundo-comida-fruta-doce-macro-suculento-plantar-imagem-foto.jpg" alt="Design de Sobrancelhas">
+<h3>Buço</h3>
+<p>Acabamento delicado e profissional.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="instagram">
+
+<div class="container">
+
+<div class="titulo">
+<h2>Instagram</h2>
+</div>
+
+<p>Acompanhe nossos resultados e novidades.</p>
+
+https://www.instagram.com/studio.thaynarapalhares/
+
+@studio.thaynarapalhares
+
+</a>
+
+</div>
+
+</section>
+
+<section id="localizacao">
+
+<div class="container">
+
+<div class="titulo">
+<h2>Localização</h2>
+</div>
+
+<div class="mapa">
+<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d294.84977970775367!2d-44.59485354659697!3d-4.580797418525441!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1spt-BR!2sbr!4v1792186572314!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+</div>
+
+</div>
+
+</section>
 
 <footer>
-Studio Thaynara Palhares • Especialista em sobrancelhas e epilação em Pedreiras e Trizidela do Vale - Maranhão.
+
+<p>Studio Thaynara Palhares</p>
+<p>Pedreiras - Maranhão</p>
+<p>Design de Sobrancelhas • Brow Lamination • Lash Lift</p>
+
 </footer>
 
-</div>
+<a
+href="https://wa.me/5598999999999"
+class="whats-float"
+target="_blank">
+
+💬
+
+</a>
 
 </body>
 </html>
